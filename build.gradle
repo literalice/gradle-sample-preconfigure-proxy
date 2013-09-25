@@ -1,0 +1,12 @@
+configurations {
+    runtime
+}
+
+dependencies {
+    runtime "org.apache.commons:commons-lang3:3.1"
+}
+
+task showDependencies << {
+    configurations.runtime.each { File file -> println file.absolutePath }
+}
+
